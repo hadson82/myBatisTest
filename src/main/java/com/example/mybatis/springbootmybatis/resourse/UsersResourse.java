@@ -23,4 +23,15 @@ public class UsersResourse {
         return usersMapper.findAll();
     }
 
+    @GetMapping("/update")
+    private List<Users> update(){
+        Users users = new Users();
+        users.setName("Youtube");
+        users.setSalary(2333L);
+
+        usersMapper.insert(users);
+
+       return usersMapper.findAll();
+    }
+
 }
